@@ -1,26 +1,37 @@
-import React from 'react';
 import { SectionHeader } from '../components/UIBase';
-import { CLIENTS_DATA, ACHIEVEMENTS_DATA } from '../constants/data';
-import { Trophy, Briefcase } from 'lucide-react';
+import { ACHIEVEMENTS_DATA } from '../constants/data';
+import { Trophy } from 'lucide-react';
 
-export const ClientsPage = () => (
-  <div className="pt-24 min-h-screen">
-    <section className="section-padding container">
-      <SectionHeader subheading="Our Network" heading="Trusted Industrial Partners" centered />
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-        {CLIENTS_DATA.map((client) => (
-          <div key={client.id} className="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center group hover:shadow-md transition-all">
-            <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
-              <Briefcase className="text-gray-300 group-hover:text-primary" />
+export const ClientsPage = () => {
+  const clientLogos = Array.from({ length: 54 }, (_, i) => ({
+    id: i + 1,
+    logoUrl: `/src/assets/images/clients/${i + 1}.png`,
+    alt: `Client Logo ${i + 1}`,
+  }));
+
+  return (
+    <div className="pt-24 min-h-screen bg-gray-50/30">
+      <section className="section-padding container">
+        <SectionHeader subheading="Our Clients" heading="Trusted by Industry Leaders" centered />
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mt-12">
+          {clientLogos.map((client) => (
+            <div
+              key={client.id}
+              className="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-center aspect-[4/3] hover:shadow-md hover:border-primary/20 hover:-translate-y-1 transition-all duration-300 group"
+            >
+              <img
+                src={client.logoUrl}
+                alt={client.alt}
+                className="max-h-[72px] max-w-full object-contain transition-all duration-300"
+              />
             </div>
-            <h3 className="text-navy font-bold mb-2">{client.name}</h3>
-            <span className="text-primary text-xs font-bold uppercase tracking-widest">{client.category}</span>
-          </div>
-        ))}
-      </div>
-    </section>
-  </div>
-);
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+};
+
 
 export const AchievementsPage = () => (
   <div className="pt-24 min-h-screen bg-navy text-white relative overflow-hidden">

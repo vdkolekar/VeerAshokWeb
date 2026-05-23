@@ -1,6 +1,5 @@
-import React from 'react';
 import { ShieldCheck, Users, Award } from 'lucide-react';
-import { SectionHeader, PrimaryButton } from '../UIBase';
+import { PrimaryButton } from '../UIBase';
 
 export const HomeHero = () => (
   <header className="relative h-screen flex items-center bg-navy overflow-hidden">

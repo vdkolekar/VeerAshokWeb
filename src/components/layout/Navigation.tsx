@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
@@ -31,7 +31,7 @@ export const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${navBackground}`}>
       <div className="container flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <span className="text-white font-bold text-xl tracking-wider">VEER ASHOK GROUP</span>
+          <img src="/src/assets/logo.png" alt="Veer Ashok Group Logo" className="h-10 md:h-12 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
