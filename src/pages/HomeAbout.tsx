@@ -58,7 +58,7 @@ export const AboutPage = () => (
         </div>
         <div className="space-y-8">
           <div className="bg-gray-200 rounded-2xl h-[400px] flex items-center justify-center relative overflow-hidden group shadow-xl">
-            <img src="/src/assets/MD-Vikas.png" alt="Mr. Vikas Kolekar" className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" />
+            <img src="assets/MD-Vikas.png" alt="Mr. Vikas Kolekar" className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" />
             <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
             <div className="absolute bottom-6 left-6 text-white">
               <p className="text-xs uppercase tracking-widest font-bold text-primary mb-1">MD & Founder</p>

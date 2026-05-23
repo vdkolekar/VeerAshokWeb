@@ -5,7 +5,7 @@ import { Trophy } from 'lucide-react';
 export const ClientsPage = () => {
   const clientLogos = Array.from({ length: 54 }, (_, i) => ({
     id: i + 1,
-    logoUrl: `/src/assets/images/clients/${i + 1}.png`,
+    logoUrl: `assets/images/clients/${i + 1}.png`,
     alt: `Client Logo ${i + 1}`,
   }));
 

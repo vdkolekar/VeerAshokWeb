@@ -31,7 +31,7 @@ export const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${navBackground}`}>
       <div className="container flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <img src="/src/assets/logo.png" alt="Veer Ashok Group Logo" className="h-10 md:h-12 w-auto" />
+          <img src="assets/logo.png" alt="Veer Ashok Group Logo" className="h-10 md:h-12 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
